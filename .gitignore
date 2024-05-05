@@ -1,2 +1,6 @@
+# Environment variables
 .env
+# pyc compiler generated files
 __pycache__/
+# sqlite3 database files
+*.db

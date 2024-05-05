@@ -22,4 +22,6 @@ The goal of this project is as follows:
 * Explain the patterns in the data over time.
 
 # Instructions
-Follow these steps, from scratch, to test this project.
+Follow these steps, from scratch, to test this project:
+1. pip install -r requirements.txt
+2. You can do "python data_visualizer.py >> data.json" to query results into a file data.json

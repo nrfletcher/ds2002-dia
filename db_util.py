@@ -25,6 +25,18 @@ class DbUtil:
         time = obj['time']
         self.cursor.execute("INSERT INTO requests (factor, pi, time) VALUES (?, ?, ?)", (factor, pi, time))
 
+    def query(self):
+        self.cursor.execute("SELECT * FROM requests")
+        rows = self.cursor.fetchall()
+        data = []
+        columns = [desc[0] for desc in self.cursor.description]
+
+        for row in rows:
+            row_dict = dict(zip(columns, row))
+            data.append(row_dict)
+        
+        return data
+
     def create_table(self):
         if self.db_created:
             return
