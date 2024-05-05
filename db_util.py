@@ -1,7 +1,8 @@
 '''
-Utility class responsible for persisting data to the SQLite3 database.
+Utility class responsible for persisting and querying data from the SQLite3 database
 '''
 import sqlite3
+import json
 
 class DbUtil:
     def __init__(self):
@@ -34,6 +35,9 @@ class DbUtil:
         for row in rows:
             row_dict = dict(zip(columns, row))
             data.append(row_dict)
+
+        with open('data.json', 'w') as json_file:
+            json.dump(data, json_file, indent=4)
         
         return data
 

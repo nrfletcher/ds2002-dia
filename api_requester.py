@@ -1,3 +1,6 @@
+'''
+Makes one API hit every 60 seconds for an hour and persists to database
+'''
 import time
 from api_util import ApiUtility
 from db_util import DbUtil
@@ -11,7 +14,7 @@ def run_loop():
         data = api_util.get()
         db_util.persist(data)
         print(f"Iteration {i+1}: Data persisted")
-        time.sleep(60)  # Wait for 1 minute
+        time.sleep(60) 
 
     db_util.disconnect()
 
