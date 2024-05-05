@@ -10,9 +10,9 @@ This URL is stored inside of a .dotenv file which exists only locally.
 <br>
 <br>
 In order to pull and test this code locally, you must do the following:
-* Import python-dotenv (as well as requests and json if not already installed)
-* Create a '.dotenv' file in the root of the project
-* Inside, have a line with the format "API_URL={insert URL here}" where the URL is the API URL provided in the writeup.
+1. Import python-dotenv (as well as requests and json if not already installed)
+2. Create a '.dotenv' file in the root of the project
+3. Inside, have a line with the format "API_URL={insert URL here}" where the URL is the API URL provided in the writeup.
 
 ## Benchmarks
 The goal of this project is as follows:
@@ -20,3 +20,6 @@ The goal of this project is as follows:
 * Persist retrieved data into a database (SQLite was chosen for this project).
 * Use data analysis techniques to describe patterns in the data.
 * Explain the patterns in the data over time.
+
+# Instructions
+Follow these steps, from scratch, to test this project.
